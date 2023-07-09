@@ -1,0 +1,34 @@
+// Array i ArrayListe dönüştürebiliriz
+
+String[] arr = {"Java", "Python", "C++"};
+
+// 1.yöntem
+ArrayList<String > list1 = new ArrayList<>(Arrays.asList(arr));
+System.out.println(list1);
+
+// 2.yöntem
+ArrayList<String> list2 = new ArrayList<>();
+
+for (String i : arr ){
+list2.add(i);
+}
+System.out.println("listeye atılmış hali: " + list2);
+
+//************************************************
+
+// ArrayListi Arraye dönüştürelim.
+
+ArrayList<String> diller = new ArrayList<>(Arrays.asList("Java", "Python", "C++"));
+
+
+String[] arr1 = new String[diller.size()];
+
+//1.yöntem
+// diller.toArray(arr1); // diziye döndürmüş olduk.
+// System.out.println("dizi hali: " + Arrays.toString(arr1));
+
+//2.yöntem
+for (int i = 0; i < arr1.length; i++) {
+arr1[i] = diller.get(i);
+}
+System.out.println("ikinci yöntem ile atama: " + Arrays.toString(arr1));
